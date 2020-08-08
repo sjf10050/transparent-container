@@ -12,6 +12,4 @@ WORKDIR /opt/src
 
 COPY ./run.sh /opt/src/run.sh
 RUN chmod 755 /opt/src/run.sh
-RUN ["/opt/src/run.sh"]
-
-CMD ["trap : TERM INT; sleep infinity &amp; wait"]
+CMD ["/opt/src/run.sh"]

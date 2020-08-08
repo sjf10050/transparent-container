@@ -38,3 +38,4 @@ iptables -t mangle -A V2RAY_MASK -d 192.168.0.0/16 -j RETURN
 iptables -t mangle -A V2RAY_MASK -p udp -j TPROXY --on-port 12345 --tproxy-mark 1
 iptables -t mangle -A PREROUTING -p udp -j V2RAY_MASK
 
+trap : TERM INT; sleep infinity &amp; wait
